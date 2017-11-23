@@ -12,7 +12,7 @@ const mapStateToProps = ({ session, errors }) => {
 const mapDispatchToProps = (dispatch) => (
   {
     signup: (user) => dispatch(signup(user)),
-    login: (user) => dispatch(login(user)),
+    // login: (user) => dispatch(login(user)),
     clearSessionErrors: () => dispatch(receiveSessionErrors([]))
   }
 );

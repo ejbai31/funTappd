@@ -1,13 +1,15 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import FrontpageContainer from './frontpage/frontpage_container';
+import NavBarContainer from './nav/navbar_container';
 
 const App = () => (
   <div>
     <header>
-      <h1>BORKBORKBORK</h1>
+      <NavBarContainer />
     </header>
-    <FrontpageContainer />
+    <Route exact path="/" component={FrontpageContainer}/>
+    <Route path="" />
   </div>
 );
 

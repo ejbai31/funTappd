@@ -9,9 +9,9 @@ class Frontpage extends React.Component {
     
     return (
       <div id="page">
-        <header>
+        {/* <header>
           <Login />
-        </header>
+        </header> */}
         <div id="desc-left">
           JOIN FUNTAPPD RIGHT NOW
         </div>
