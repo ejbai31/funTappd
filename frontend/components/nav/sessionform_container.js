@@ -5,15 +5,17 @@ import SessionForm from './sessionform';
 
 
 const mapStateToProps = (state) => {
+  
+
   return {
-    loggedIn: Boolean(state.session.currentUser),
+    loggedIn: Boolean(state.sessionReducer.currentUser),
     errors: state.errors.session
   };
 };
 
 const mapDispatchToProps = (dispatch, { location }) => {
   return {
-    processForm: user => dispatch(login(user))
+    login: user => dispatch(login(user))
   };
 };
 

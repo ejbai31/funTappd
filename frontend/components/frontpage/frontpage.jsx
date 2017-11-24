@@ -8,15 +8,16 @@ class Frontpage extends React.Component {
   render() {
     
     return (
-      <div id="page">
-        {/* <header>
-          <Login />
-        </header> */}
+      <div id="frontpage">
         <div id="desc-left">
-          JOIN FUNTAPPD RIGHT NOW
+          <h2>JOIN FUNTAPPD RIGHT NOW</h2>
         </div>
-        <Signup signup={this.props.signup}
-          errors={this.props.errors} />
+        <div id="form-right">
+          <Signup signup={this.props.signup}
+            errors={this.props.errors} 
+            history={this.props.history}
+            />
+        </div>
       </div>
     );
   }

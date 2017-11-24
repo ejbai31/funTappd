@@ -19,51 +19,67 @@ class SessionForm extends React.Component {
 
   update(field) {
     return e => this.setState({
-      [field]: e.currentTarget.value
+      [field]: e.target.value
     });
   }
 
   handleSubmit(e) {
+    console.log(this.props);
     e.preventDefault();
-    const user = this.state;
-    this.props.processForm({ user });
+    this.props.login(this.state)
+      .then(() => this.props.history.push('/dashboard'));
   }
 
-  renderErrors() {
-    return (
+  renderErrors(errors=[]) {
+    const display = errors ? (
       <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+        {this.props.errors.map((error) => (
+          <li>
             {error}
           </li>
-        ))}
+        ))} 
       </ul>
-    );
+  ) : (
+    <ul>""</ul>
+  );
+  return display;
   }
+
+  // const display = all_ids ? (
+  //   all_ids.map(id =>
+  //     <FeedIndexItemContainer
+  //       key={id}
+  //       post={by_id[id]}
+  //       user={users[by_id[id].author_id]} />)
+  // ) : (
+  //     <div></div>
+  //   );
 
   render() {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form">
-          {this.renderErrors()}
           <div className="login-form">
-            <label>Username:
+            <label>Username:     
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
-              />
+                />
             </label>
-            <label>Password:
+            <label>Password:    
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-input"
-              />
+                />
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Login" />
           </div>
         </form>
+        <span className="errors">
+          {this.renderErrors()}
+        </span>
       </div>
     );
   }

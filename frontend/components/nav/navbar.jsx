@@ -10,7 +10,7 @@ export default ({ currentUser, logout }) => {
       <button onClick={logout}>Log Out</button>
     </div>
   ) : (
-      <div>
+      <div className="session-form">
         <SessionFormContainer />
       </div>
     );
@@ -18,7 +18,7 @@ export default ({ currentUser, logout }) => {
   return (
     <header className="nav-bar">
       <h1 className="logo">BORK</h1>
-      <div>
+      <div className="session-form">
         {display}
       </div>
     </header>

@@ -4,8 +4,8 @@ class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      password: "",
-      username: ""
+      username: "",
+      password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -15,8 +15,8 @@ class Signup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.signup(user);
+    this.props.signup(this.state)
+      .then(() => this.props.history.push('/dashboard'));
   }
 
   handleInputChange(field) {
@@ -25,19 +25,7 @@ class Signup extends React.Component {
     });
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.errors.length > 0 &&
-      newProps.errors[0].responseJSON[0] !== "Invalid Username or Password") {
-      this.setState({
-        errors: newProps.errors[0].responseJSON.map((error, index) => {
-          return (
-            <span key={index}>{error}</span>
-          );
-        })
-      });
-    }
-  }
-
+  
   renderErrors() {
     return (
       <div id="signup-errors">
@@ -57,24 +45,27 @@ class Signup extends React.Component {
       this.removeErrors();
     }
     return (
-      <form onSubmit={this.handleSubmit} id="signup-form">
-        <h1> Create a New Account </h1>
+      <div className="sign-up">
+        <form onSubmit={this.handleSubmit} id="signup-form">
+          <h1> Create a New Account </h1>
 
-        <div>
-          <input type="text" className="signup-form-username"
-            onChange={this.handleInputChange('username')}
-            defaultValue="username">
-          </input>
-        </div>
+          <label>Username:
+            <input type="text" className="signup-form-username"
+              onChange={this.handleInputChange('username')}
+              defaultValue="username">
+            </input>
+          </label>
+          <label>Password:
+            <input type="password"
+              onChange={this.handleInputChange('password')}
+              defaultValue="password">
+            </input>
+          </label>
+          <button>Create Account</button>
 
-        <input type="text"
-          onChange={this.handleInputChange('password')}
-          defaultValue="password">
-          </input>
-        <button>Create Account</button>
-
-        {this.state.errors ? this.renderErrors() : ""}
-      </form>
+          {this.state.errors ? this.renderErrors() : ""}
+        </form>
+      </div>
     );
   }
 }

@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import { signup, login, receiveSessionErrors } from '../../actions/session_actions';
 import Frontpage from './frontpage';
+import { withRouter } from 'react-router';
 
-const mapStateToProps = ({ session, errors }) => {
+const mapStateToProps = ({ sessionReducer, errors }) => {
   return {
-    currentUser: session.currentUser,
+    currentUser: sessionReducer.currentUser,
     errors: errors.session
   };
 };
@@ -17,4 +18,4 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Frontpage);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Frontpage));
