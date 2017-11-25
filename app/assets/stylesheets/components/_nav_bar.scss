@@ -1,0 +1,21 @@
+.nav-bar {
+  background: $navcolor;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  .login-input{
+    margin: 0px 5px;
+    padding: 0px 10px;
+  }
+  .errors{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+  }
+}
+
+.logo {
+  font-family: $logofont, cursive;
+  font-size: 36px;
+}

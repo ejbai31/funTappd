@@ -17,7 +17,9 @@ export default ({ currentUser, logout }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">BORK</h1>
+      <div>
+        <h1 className="logo">funTappd</h1>
+      </div>
       <div className="session-form">
         {display}
       </div>
