@@ -30,20 +30,20 @@ class SessionForm extends React.Component {
       .then(() => this.props.history.push('/dashboard'));
   }
 
-  renderErrors(errors=[]) {
-    const display = errors ? (
-      <ul>
-        {this.props.errors.map((error) => (
-          <li>
-            {error}
-          </li>
-        ))} 
-      </ul>
-  ) : (
-    <ul>""</ul>
-  );
-  return display;
+  renderErrors(errors) {
+    let display = <ul></ul>;
+    if(this.props.errors){
+      display = this.props.errors.map((error)=> (
+        <li>
+          {error}
+        </li>
+      ));
+    }
+
+    return display;
   }
+
+
 
   // const display = all_ids ? (
   //   all_ids.map(id =>
