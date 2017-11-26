@@ -7,5 +7,6 @@ class CreateBreweryReviews < ActiveRecord::Migration[5.1]
       t.integer :brewery_id, null: false
       t.timestamps
     end
+    add_index :brewery_reviews, [:user_id, :brewery_id], unique: true
   end
 end
