@@ -47,16 +47,20 @@ class Signup extends React.Component {
     return (
       <div className="sign-up">
         <form onSubmit={this.handleSubmit} id="signup-form">
-          <h1> Create a New Account </h1>
+          <h2>Create a New Account</h2>
 
           <label>Username:
-            <input type="text" className="signup-form-username"
+            <input 
+              type="text" 
+              className="signup-form-username"
               onChange={this.handleInputChange('username')}
               defaultValue="username">
             </input>
           </label>
           <label>Password:
-            <input type="password"
+            <input 
+              type="password"
+              className = "signup-form-password"
               onChange={this.handleInputChange('password')}
               defaultValue="password">
             </input>

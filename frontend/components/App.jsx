@@ -10,7 +10,10 @@ const App = () => (
     <Route path="/" component={NavBarContainer} />
     <AuthRoute exact path="/" component={FrontpageContainer}/>
     <ProtectedRoute path="/dashboard" component={Dashboard} />
-
+    <footer>
+      {/* TODO
+      ADD LINKS TO MEDIA */}
+    </footer>
   </div>
 );
 

@@ -10,8 +10,13 @@ class Frontpage extends React.Component {
     return (
       <div className="frontpage">
         <div className="desc-left">
-          <h2>JOIN FUNTAPPD RIGHT NOW</h2>
-          <p>Rate your favorite beers and breweries! Share with friends!</p>
+          <h2>Join funTappd!</h2>
+          <p>Rate and share your favorite beers and breweries!
+            <br/>
+            Discover new beers and breweries! 
+            <br/>
+            All for free! 
+          </p>
         </div>
         <div className="form-right">
           <Signup signup={this.props.signup}

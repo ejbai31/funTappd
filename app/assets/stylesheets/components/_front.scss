@@ -1,11 +1,15 @@
 html, body, div {
   padding: 0;
   margin: 0;
-  font-family: $regfont;
+  font-family: $regfont, sans-serif;
 }
 
 body {
   background: gray;
+  background-image: url('adam-wilson-138927.jpg');
+  background-position: right top;
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 
@@ -14,24 +18,31 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
   div {
-    margin: 10px;
+    margin: 30px;
+    border-radius: 10px;
   }
-
+  
   input {
     background: white;
     border-bottom: 1px solid black;
     border-radius: 0px;
   }
+  
 }
 
 .desc-left {
   flex: 1;
-  width: 400px;
   padding: 1rem;
   background: white;
   opacity: 0.5;
+  width: auto;
+  p{
+    font-size: 25px;
+  }
+  h2{
+    font-size: 50px;
+  }
 }
 
 .form-right {
@@ -40,4 +51,7 @@ body {
   width: 400px;
   background: white;
   opacity: 0.5;
+  h2 {
+    font-size: 40px;
+  }
 }
