@@ -3,9 +3,9 @@ import { signup, login, receiveSessionErrors } from '../../actions/session_actio
 import Frontpage from './frontpage';
 import { withRouter } from 'react-router';
 
-const mapStateToProps = ({ sessionReducer, errors }) => {
+const mapStateToProps = ({ session, errors }) => {
   return {
-    currentUser: sessionReducer.currentUser,
+    currentUser: session.currentUser,
     errors: errors.session
   };
 };

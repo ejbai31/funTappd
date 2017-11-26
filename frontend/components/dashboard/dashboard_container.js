@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import Dashboard from './dashboard';
+// import { receiveCurrentUser }
 
-const mapStateToProps = ({sessionReducer}) => ({
-  currentUser: sessionReducer.currentUser,
+const mapStateToProps = ({session}) => ({
+  currentUser: session.currentUser
 
 });
 
