@@ -39,3 +39,8 @@ export const logout = () => dispatch => (
     dispatch(logoutCurrentUser())
   ))
 );
+
+export const getCurrentUser = id => dispatch => (
+  APIUtil.currentUser(id)
+    .then(user => dispatch(receiveCurrentUser(user)))
+);
