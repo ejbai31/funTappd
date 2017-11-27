@@ -14,19 +14,23 @@ class Dashboard extends React.Component{
   render(){
     return(
       <div className="user-dashboard">
-        <div className="user-card">
-          <h1>USERCARD</h1>
-          <div>
-            <img className="user-image" alt="USER IMAGE"/>
-            {this.props.user.username}
+      
+        <div className="sidebar-left">
+          <div className="user-card">
+            <h1>USERCARD</h1>
+            <div>
+              <img className="user-image" alt="USER IMAGE"/>
+              {this.props.user.username}
+            </div>
+          </div>
+          <div className ="user-list">
+            <h1>USERLIST</h1>
           </div>
         </div>
         <div className="user-feed">
           <h1>USERFEED</h1>
         </div>
-        <div className ="user-list">
-          <h1>USERLIST</h1>
-        </div>
+        
       </div>
     );
   }
