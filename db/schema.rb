@@ -22,12 +22,14 @@ ActiveRecord::Schema.define(version: 20171126030530) do
     t.integer "beer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "beer_id"], name: "index_beer_reviews_on_user_id_and_beer_id", unique: true
   end
 
   create_table "beers", force: :cascade do |t|
     t.string "name", null: false
-    t.string "type", null: false
+    t.string "style", null: false
     t.integer "abv", null: false
+    t.text "description", null: false
     t.integer "brewery_id", null: false
     t.string "img_url", null: false
     t.datetime "created_at", null: false
@@ -37,6 +39,7 @@ ActiveRecord::Schema.define(version: 20171126030530) do
   create_table "breweries", force: :cascade do |t|
     t.string "name", null: false
     t.string "location", null: false
+    t.text "description", null: false
     t.string "img_url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -49,6 +52,7 @@ ActiveRecord::Schema.define(version: 20171126030530) do
     t.integer "brewery_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "brewery_id"], name: "index_brewery_reviews_on_user_id_and_brewery_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|

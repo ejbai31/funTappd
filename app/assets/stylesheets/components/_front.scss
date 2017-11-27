@@ -27,6 +27,7 @@ body {
     background: white;
     border-bottom: 1px solid black;
     border-radius: 0px;
+    
   }
   
 }
@@ -54,4 +55,12 @@ body {
   h2 {
     font-size: 40px;
   }
+}
+
+button, .login-button {
+  text-align: center;
+  background: $lightgray;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
 }

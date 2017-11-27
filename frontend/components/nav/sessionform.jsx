@@ -24,9 +24,17 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
-    console.log(this.props);
     e.preventDefault();
     this.props.login(this.state)
+      .then(() => this.props.history.push('/dashboard'));
+  }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+    let demoUser = this.props.login({
+      username:"guest",
+      password:"password"
+    })
       .then(() => this.props.history.push('/dashboard'));
   }
 
@@ -74,7 +82,8 @@ class SessionForm extends React.Component {
                 className="login-input"
                 />
             </label>
-            <input type="submit" value="Login" />
+            <input className="login-button" type="submit" value="Login" />
+            <button onClick={this.handleDemoLogin} className="demo-button">Demo</button>
           </div>
         </form>
         <span className="errors">
