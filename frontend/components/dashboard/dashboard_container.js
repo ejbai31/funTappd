@@ -3,8 +3,8 @@ import Dashboard from './dashboard';
 import { receiveCurrentUser, getCurrentUser } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
-  console.log(state);
-  return {user: state.session.user};
+  console.log(state.session.currentUser.username);
+  return {user: state.session.currentUser};
 
 };
 

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import FrontpageContainer from './frontpage/frontpage_container';
 import NavBarContainer from './nav/navbar_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Dashboard from './dashboard/dashboard';
+import Dashboard from './dashboard/dashboard_container';
 
 const App = () => (
   <div>
