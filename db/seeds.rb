@@ -24,6 +24,24 @@
 
 user1 = User.create(username: "guest", password:"password")
 
-beer1 = Beer.create(name:"Nomelhead", style:"Gud beer", abv:350, description:"P good", brewery_id: 1, img_url:"https://48tk9j3a74jb133e1k2fzz2s-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/Monkish-Brewing-Other-Half-Nomelhead-bottle.jpg")
+10.times do 
+  username = Faker::LordOfTheRings.character
+  password = "password"
+  User.create(username: username, password: password)
+end
 
-brewery1 = Brewery.create(name:"Monkish", location: "CA", description: "THE SPOT", img_url:"https://lh5.ggpht.com/K51rCCkrJs_Qqp1C4By6ToEBmuIOycGyJjDOtVaZWM99LNrIyq5h7cw2-iQTCltfV48f-X8fS6jD8zymdj5GUbQBz69AE6c=s750")
+
+50.times do 
+  name = Faker::Beer.name
+  style = Faker::Beer.style
+  abv = Faker::Beer.alcohol
+  description = Faker::MostInterestingManInTheWorld.quote
+  brewery_id = Random.rand(User.all.count) + 1 
+  Beer.create(name: name, style: style, description: description, brewery_id: brewery_id)
+end
+
+20.times do 
+  name = Faker::Book.title
+  location = Faker::LordOfTheRings.location
+  Brewery.create(name: name, location: location)
+end
