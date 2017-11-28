@@ -10,7 +10,6 @@ class Signup extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
-    this.removeErrors = this.removeErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -34,11 +33,6 @@ class Signup extends React.Component {
     );
   }
 
-  removeErrors() {
-    setTimeout(() => {
-      this.setState({ errors: "" });
-    }, 2000);
-  }
 
   render() {
     if (this.state.errors) {

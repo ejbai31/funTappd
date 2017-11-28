@@ -12,6 +12,8 @@ const App = () => (
       <AuthRoute exact path="/" component={FrontpageContainer}/>
       <ProtectedRoute path="/dashboard" component={Dashboard} />
     </Switch>
+    {/* <Route exact path="/beers" component={BeerContainer} />
+    <Route exact path="/breweries" component={BreweryContainer} /> */}
     <footer>
       {/* TODO
       ADD LINKS TO MEDIA */}

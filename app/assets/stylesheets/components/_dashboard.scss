@@ -12,4 +12,15 @@
 .sidebar-left{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+}
+
+.user-list{
+  margin-top: 10px;
+}
+
+.errors{
+  list-style: none;
+  color: red;
 }
