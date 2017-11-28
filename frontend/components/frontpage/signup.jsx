@@ -25,19 +25,22 @@ class Signup extends React.Component {
   }
 
   
-  renderErrors() {
-    return (
-      <div id="signup-errors">
-        {this.state.errors}
-      </div>
-    );
+  renderErrors(errors) {
+    let display = <ul></ul>;
+    if (this.props.errors) {
+      display = this.props.errors.map((error) => (
+        <li>
+          {error}
+        </li>
+      ));
+    }
+
+    return display;
   }
 
 
   render() {
-    if (this.state.errors) {
-      this.removeErrors();
-    }
+ 
     return (
       <div className="sign-up">
         <form onSubmit={this.handleSubmit} id="signup-form">
@@ -61,7 +64,9 @@ class Signup extends React.Component {
           </label>
           <button>Create Account</button>
 
-          {this.state.errors ? this.renderErrors() : ""}
+          <span className="errors">
+            {this.renderErrors()}
+          </span>
         </form>
       </div>
     );

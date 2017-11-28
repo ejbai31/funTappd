@@ -40,6 +40,8 @@ class SessionForm extends React.Component {
       .then(() => this.props.history.push('/dashboard'));
   }
 
+
+  
   renderErrors(errors) {
     let display = <ul></ul>;
     if(this.props.errors){
