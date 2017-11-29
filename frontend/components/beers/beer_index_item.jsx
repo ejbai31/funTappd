@@ -10,13 +10,13 @@ class BeerIndexItem extends React.Component{
 
   render(){
     console.log("IN THE BEER INDEX ITEM");
-
+    debugger
     return(
       <div className="beer-index-item">
         <div className="beer-info-main">
           <img src={this.props.beer.image_url} alt="beer default"/>
           <h2>{this.props.beer.name}</h2>
-          <h3>Brewery: </h3>
+          <h3>Brewery: {this.props.beer.brewery.name}</h3>
         </div>
         <div className="beer-info">
           <h3>Style: {this.props.beer.style}</h3>
