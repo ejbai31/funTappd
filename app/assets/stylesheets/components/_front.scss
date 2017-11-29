@@ -36,13 +36,17 @@ body {
   flex: 1;
   padding: 1rem;
   background: white;
-  opacity: 0.5;
+  opacity: 0.8;
   width: auto;
   p{
     font-size: 25px;
   }
   h2{
     font-size: 50px;
+  }
+  .accent-text {
+    font-size: 35px;
+    font-weight: 700px;
   }
 }
 
@@ -51,7 +55,7 @@ body {
   padding: 1rem;
   width: 400px;
   background: white;
-  opacity: 0.5;
+  opacity: 0.8;
   h2 {
     font-size: 40px;
   }

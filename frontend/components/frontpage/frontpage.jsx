@@ -15,8 +15,10 @@ class Frontpage extends React.Component {
             <br/>
             Discover new beers and breweries! 
             <br/>
-            All for free! 
           </p>
+          <p className="accent-text">
+          <br/>
+          All for free!</p>
         </div>
         <div className="form-right">
           <Signup signup={this.props.signup}

@@ -3,6 +3,8 @@ import * as BeerUtil from '../util/beer_api_util';
 export const RECEIVE_BEER = 'RECEIVE_BEER';
 export const RECEIVE_BEERS = 'RECEIVE_BEERS';
 export const REMOVE_BEER = 'REMOVE_BEER';
+export const CREATE_BEER = 'CREATE_BEER';
+
 
 
 export const receiveBeer = beer => ({
@@ -20,6 +22,10 @@ export const removeBeer = id => ({
   id
 });
 
+export const createBeer = beer => dispatch => (
+  BeerUtil.createBeer(beer)
+    .then(newBeer => dispatch(receiveBeer(newBeer)))
+);
 
 export const fetchBeer = id => dispatch => (
   BeerUtil.fetchBeer(id)

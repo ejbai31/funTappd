@@ -9,6 +9,15 @@ class Api::BeersController < ApplicationController
       render json: @beer.errors.fullmessages, status: 422
     end
   end
+
+  def update 
+    @drink = Beer.find_by(id: params[:id])
+  end
+
+  def edit
+    @drink = Beer.find_by(id: params[:id])
+    render 'api/beers/show'
+  end
   
   def show
     @beer = Beer.find_by(id: params[:id])

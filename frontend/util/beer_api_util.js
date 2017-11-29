@@ -27,3 +27,10 @@ export const deleteBeer = id => (
     url: '/api/beers'
   })
 );
+
+export const editBeer = id => (
+  $.ajax({
+    method: "PATCH",
+    url: `/api/beers/${id}/edit`
+  })
+);
