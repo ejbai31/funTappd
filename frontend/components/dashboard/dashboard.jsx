@@ -4,7 +4,7 @@ import FavoritesTable from './favorites_table';
 class Dashboard extends React.Component{
   constructor(props){
     super(props);
-    console.log(props);
+    // console.log(props);
   }
 
   // componentWillMount(){

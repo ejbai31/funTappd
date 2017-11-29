@@ -11,15 +11,10 @@ class BeerIndex extends React.Component{
     this.props.getBeers();
   }
 
-  componentWillReceiveProps(newProps){
-    console.log("OLDPROPS", this.props);
-    console.log("NEWPROPS", newProps);
-  }
-
   render(){
     // const {beers} = this.props;
     // console.log(beers);
-    console.log(this.props.beers);
+    // console.log(this.props.beers);
     // if (!(this.props.beers)){
     //   debugger
     //   return null;

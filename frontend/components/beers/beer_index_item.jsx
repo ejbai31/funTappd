@@ -4,13 +4,9 @@ import { Link, withRouter } from 'react-router-dom';
 class BeerIndexItem extends React.Component{
   constructor(props){
     super(props);
-    console.log("IN THE BEER INDEX ITEM");
-    console.log(this);
   }
 
   render(){
-    console.log("IN THE BEER INDEX ITEM");
-    debugger
     return(
       <div className="beer-index-item">
         <div className="beer-info-main">
