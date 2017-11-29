@@ -51,7 +51,7 @@ class Signup extends React.Component {
               type="text" 
               className="signup-form-username"
               onChange={this.handleInputChange('username')}
-              defaultValue="username">
+              placeholder="username">
             </input>
           </label>
           <label>Password:
@@ -59,7 +59,7 @@ class Signup extends React.Component {
               type="password"
               className = "signup-form-password"
               onChange={this.handleInputChange('password')}
-              defaultValue="password">
+              placeholder="password">
             </input>
           </label>
           <button>Create Account</button>

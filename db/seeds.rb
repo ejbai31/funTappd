@@ -24,24 +24,29 @@
 
 user1 = User.create(username: "guest", password:"password")
 
+Faker::LordOfTheRings.unique.clear
+
 10.times do 
-  username = Faker::LordOfTheRings.character
+  username = Faker::LordOfTheRings.unique.character
   password = "password"
-  User.create(username: username, password: password)
+  User.create!(username: username, password: password)
 end
 
 
-50.times do 
-  name = Faker::Beer.name
-  style = Faker::Beer.style
-  abv = Faker::Beer.alcohol
-  description = Faker::MostInterestingManInTheWorld.quote
-  brewery_id = Random.rand(User.all.count) + 1 
-  Beer.create(name: name, style: style, description: description, brewery_id: brewery_id)
-end
 
 20.times do 
   name = Faker::Book.title
   location = Faker::LordOfTheRings.location
-  Brewery.create(name: name, location: location)
+  Brewery.create!(name: name, location: location)
+end
+
+
+20.times do 
+  name = Faker::Beer.name
+  style = Faker::Beer.style
+  abv = Faker::Beer.alcohol
+  description = Faker::MostInterestingManInTheWorld.quote
+  rating = Faker::Number.between(1, 5)
+  brewery_id = Random.rand(Brewery.all.count) + 1 
+  Beer.create!(name: name, style: style, abv: abv, description: description, rating: rating, brewery_id: brewery_id)
 end
