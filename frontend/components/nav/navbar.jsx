@@ -23,7 +23,7 @@ export default ({ currentUser, logout }) => {
   return (
     <header className="nav-bar">
       <div>
-        <h1 className="logo">funTappd</h1>
+        <Link to="/dashboard" className="logo">funTappd</Link>
       </div>
       <div className="session-form">
         {display}
