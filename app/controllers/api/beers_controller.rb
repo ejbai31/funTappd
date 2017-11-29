@@ -10,20 +10,22 @@ class Api::BeersController < ApplicationController
     end
   end
 
-  def update 
-    @drink = Beer.find_by(id: params[:id])
+  def update
+    @beer = Beer.new(beer_params)
+    if @beer && @beer.update(beer_params)
+      render :show
+    else
+      render json: @beer.errors.full_messages, status: 422
+    end
   end
 
   def edit
-    @drink = Beer.find_by(id: params[:id])
+    @beer = Beer.find_by(id: params[:id])
     render 'api/beers/show'
   end
   
   def show
     @beer = Beer.find_by(id: params[:id])
-  end
-
-  def update
   end
 
   def destroy

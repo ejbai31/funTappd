@@ -30,7 +30,15 @@ export const deleteBeer = id => (
 
 export const editBeer = id => (
   $.ajax({
-    method: "PATCH",
+    method: "GET",
     url: `/api/beers/${id}/edit`
+  })
+);
+
+export const updateBeer = beer => (
+  $.ajax({
+    method: "PATCH",
+    url: `/api/beers/${beer.id}`,
+    data: {beer}
   })
 );

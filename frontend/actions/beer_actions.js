@@ -41,3 +41,13 @@ export const deleteBeer = id => dispatch => (
   BeerUtil.deleteBeer(id)
     .then(beer => dispatch(removeBeer(beer)))
 );
+
+export const updateBeer = beer => dispatch => (
+  BeerUtil.updateBeer(beer)
+    .then(updatedBeer => dispatch(receiveBeer(updateBeer)))
+);
+
+export const editBeer = id => dispatch => (
+  BeerUtil.editBeer(id)
+    .then(editedBeer => dispatch(receiveBeer(editedBeer)))
+);
