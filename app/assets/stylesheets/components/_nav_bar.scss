@@ -19,3 +19,19 @@
   font-family: $logofont, cursive;
   font-size: 36px;
 }
+
+.nav-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.nav-buttons {
+  margin: 10px;
+}
+
+.nav-buttons:hover{
+  text-decoration: underline;
+}

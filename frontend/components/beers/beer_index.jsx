@@ -46,6 +46,7 @@ class BeerIndex extends React.Component{
                 />
               ))
             } */}
+            <h1>Beer List</h1>
             {display}
           </ul>
         </div>

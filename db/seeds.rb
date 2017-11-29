@@ -48,5 +48,5 @@ end
   description = Faker::MostInterestingManInTheWorld.quote
   rating = Faker::Number.between(1, 5)
   brewery_id = Random.rand(Brewery.all.count) + 1 
-  Beer.create!(name: name, style: style, abv: abv, description: description, rating: rating, brewery_id: brewery_id)
+  Beer.create!(name: name, style: style, abv: abv, description: description, img_url: "beer_bottle-512.png", rating: rating, brewery_id: brewery_id)
 end

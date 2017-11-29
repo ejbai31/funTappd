@@ -6,10 +6,10 @@ import { signup } from '../../util/session_api_util';
 
 export default ({ currentUser, logout }) => {
   const display = currentUser ? (
-    <div>
+    <div className="nav-show">
       <div className="nav-links">
-        <Link to="/beers">Beers</Link>
-        <Link to="/breweries">Breweries</Link>
+        <Link className="nav-buttons" to="/beers">Beers</Link>
+        <Link className="nav-buttons" to="/breweries">Breweries</Link>
       </div>
       <p>{currentUser.username}</p>
       <button onClick={logout}>Log Out</button>
