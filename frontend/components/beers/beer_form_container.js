@@ -30,7 +30,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   return({
     createBeer: beer => dispatch(createBeer(beer)),
     fetchBeer: id => dispatch(fetchBeer(id)),
-    updateBeer: beer => dispatch(updateBeer(beer))
+    updateBeer: beer => dispatch(updateBeer(beer)),
+    deleteBeer: id => dispatch(deleteBeer(id))
   });
 };
 

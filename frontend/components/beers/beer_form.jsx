@@ -38,6 +38,12 @@ class BeerForm extends React.Component{
 
 
   render(){
+    let deleteButton = "";
+    let formType = this.props.formType;
+    if (formType === 'edit') {
+      deleteButton = <button onClick={this.deleteDrink}>Delete</button>;
+    }
+
     if (this.props.formType === "edit" && !this.props.fields) return null;
     console.log(this.props);
     return(
@@ -75,6 +81,7 @@ class BeerForm extends React.Component{
           value={this.state.description}></textarea>
            
           <button onClick={this.handleSubmit}>Create!</button>
+          {deleteButton}
         </form>
       </div>
     );

@@ -7,6 +7,7 @@ class BeerIndexItem extends React.Component{
   }
 
   render(){
+    console.log(this.props);
     return(
       <div className="beer-index-item">
         <div className="beer-info-main">
@@ -15,7 +16,7 @@ class BeerIndexItem extends React.Component{
           <h3>Brewery: {this.props.beer.brewery.name}</h3>
           <div className="edit-delete-buttons">
             <Link to={`/beers/${this.props.beer.id}/edit`}>Edit</Link>
-    
+      
           </div>
         </div>
         <div className="beer-info">
