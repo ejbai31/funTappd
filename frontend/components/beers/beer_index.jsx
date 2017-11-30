@@ -29,7 +29,6 @@ class BeerIndex extends React.Component{
     ) : (
       <div>NO BEERS</div>
     );
-      debugger
       return(
 
         <div className="beer-index">
