@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do 
     resources :users, only: [:show, :create]
     resources :beers, only: [:show, :create, :destroy, :index, :update, :edit]
+    resources :breweries, only: [:create]
     resource :session, only: [ :show, :create, :destroy]
   end
   root to: 'root#root'

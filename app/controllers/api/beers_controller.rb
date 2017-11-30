@@ -6,7 +6,7 @@ class Api::BeersController < ApplicationController
     if @beer.save
       render 'api/beers/show'
     else
-      render json: @beer.errors.fullmessages, status: 422
+      render json: @beer.errors.full_messages, status: 422
     end
   end
 
