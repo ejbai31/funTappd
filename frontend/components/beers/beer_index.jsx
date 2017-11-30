@@ -19,11 +19,12 @@ class BeerIndex extends React.Component{
     //   debugger
     //   return null;
     // }else{
-    //   console.log("IN HERE", this.props.beers);
+      // console.log("IN HERE", this.props.beers);
 
     const display = this.props.beers ? (
       Object.keys(this.props.beers).map(key => 
-      <BeerIndexItem 
+      <BeerIndexItem
+      key={this.props.beers[key].id}
       beer = {this.props.beers[key]}
       />)
     ) : (

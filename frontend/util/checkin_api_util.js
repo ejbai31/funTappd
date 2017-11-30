@@ -1,14 +1,8 @@
 
-export const getCheckins= () => (
-  $.ajax({
-    method:"GET",
-    url: `/api/checkins/`
-  })
-);
 
-
-export const getCheckin = id => (
+export const getAllReviews = i => (
   $.ajax({
-    method: "GET"
+    method: "GET",
+    url: `/api/reviews`
   })
 );

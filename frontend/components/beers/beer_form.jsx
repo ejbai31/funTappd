@@ -21,7 +21,7 @@ class BeerForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    if(this.props.formType === "create"){
+    if(this.props.formType === "new"){
       this.props.createBeer(this.state)
         .then(() => this.props.history.push('/beers'));
     }else{
@@ -38,7 +38,6 @@ class BeerForm extends React.Component{
 
 
   render(){
-    debugger
     if (this.props.formType === "edit" && !this.props.fields) return null;
     console.log(this.props);
     return(
