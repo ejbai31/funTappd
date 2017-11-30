@@ -9,12 +9,25 @@ class BeerForm extends React.Component{
     this.update = this.update.bind(this);
   }
 
+  componentDidMount(){
+    if(this.props.formType === "edit" && !this.state){
+      this.props.fetchBeer(this.props.match.params.id);
+    }
+  }
   
-  
+  componentWillReceiveProps(newProps){
+    this.setState(newProps.fields);
+  }
+
   handleSubmit(e){
     e.preventDefault();
-    this.props.createBeer(this.state)
-      .then(() => this.props.history.push('/beers'));
+    if(this.props.formType === "create"){
+      this.props.createBeer(this.state)
+        .then(() => this.props.history.push('/beers'));
+    }else{
+      this.props.updateBeer(this.state)
+        .then(() => this.props.history.push('/beers'));
+    }
   }
   
   update(field) {
@@ -25,6 +38,8 @@ class BeerForm extends React.Component{
 
 
   render(){
+    debugger
+    if (this.props.formType === "edit" && !this.props.fields) return null;
     console.log(this.props);
     return(
       <div className="create-beer-main">
@@ -40,6 +55,7 @@ class BeerForm extends React.Component{
           <h2>Brewery</h2>
           <input 
           onChange={this.update('brewery')}
+          value={this.state.brewery.name}
           type="text"/>
           
           <h2>Style</h2>

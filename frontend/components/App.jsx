@@ -11,10 +11,11 @@ const App = () => (
   <div>
     <Route path="/" component={NavBarContainer} />
     <Switch>
-      <AuthRoute exact path="/" component={FrontpageContainer}/>
+      <AuthRoute exact path="/" component={FrontpageContainer} />
       <ProtectedRoute path="/dashboard" component={Dashboard} />
-      <ProtectedRoute path="/beers" component={BeerContainer} />
+      <ProtectedRoute exact path="/beers" component={BeerContainer} />
       <ProtectedRoute path="/create_beer" component={BeerFormContainer} />
+      <ProtectedRoute path= "/beers/:id/edit" component={BeerFormContainer} />
     </Switch>
     <footer>
       {/* TODO

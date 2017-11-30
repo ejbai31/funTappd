@@ -13,7 +13,9 @@ class Api::BeersController < ApplicationController
   end
 
   def update
-    @beer = Beer.new(beer_params)
+    @beer = Beer.find_by(id: params[:id])
+    brewery = Brewery.find_or_create_by(name: params[:beer][:brewery][:name])
+    @beer.update(brewery: brewery)
     if @beer && @beer.update(beer_params)
       render :show
     else
@@ -43,6 +45,6 @@ class Api::BeersController < ApplicationController
   private
 
   def beer_params
-    params.require(:beer).permit(:name, :style, :abv, :description, :rating)
+    params.require(:beer).permit(:name, :style, :abv, :brewery, :description, :rating)
   end
 end

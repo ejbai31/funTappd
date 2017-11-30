@@ -44,7 +44,7 @@ export const deleteBeer = id => dispatch => (
 
 export const updateBeer = beer => dispatch => (
   BeerUtil.updateBeer(beer)
-    .then(updatedBeer => dispatch(receiveBeer(updateBeer)))
+    .then(updatedBeer => dispatch(receiveBeer(updatedBeer)))
 );
 
 export const editBeer = id => dispatch => (
