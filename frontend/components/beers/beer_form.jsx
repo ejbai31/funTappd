@@ -14,7 +14,7 @@ class BeerForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.props.createBeer(this.state)
-      .then(() => this.props.history.push(','));
+      .then(() => this.props.history.push('/beers'));
   }
   
   update(field) {

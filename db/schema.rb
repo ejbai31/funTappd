@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20171126030523) do
 
   create_table "breweries", force: :cascade do |t|
     t.string "name", null: false
-    t.string "location", null: false
+    t.string "location"
     t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

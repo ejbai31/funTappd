@@ -3,6 +3,8 @@ class Api::BeersController < ApplicationController
   
   def create 
     @beer = Beer.new(beer_params)
+    brewery = Brewery.find_or_create_by(name: params[:beer][:brewery])
+    @beer.brewery = brewery
     if @beer.save
       render 'api/beers/show'
     else
@@ -41,6 +43,6 @@ class Api::BeersController < ApplicationController
   private
 
   def beer_params
-    params.require(:beer).permit(:name, :style, :abv, :description, :brewery_id, :rating)
+    params.require(:beer).permit(:name, :style, :abv, :description, :rating)
   end
 end

@@ -8,7 +8,7 @@ const BeerReducer = (state=[], action) => {
     case RECEIVE_BEERS:
       return merge({}, action.beers);
     case RECEIVE_BEER:
-      return merge({}, state, action.beer);
+      return merge({}, state, {[action.beer.id]: action.beer});
     case REMOVE_BEER:
       delete newState[action.id];
       return newState;
