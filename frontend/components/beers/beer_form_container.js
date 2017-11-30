@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import BeerForm from './beer_form';
 import { withRouter } from 'react-router-dom';
+import { createBrewery } from '../../actions/brewery_actions';
 import { createBeer, deleteBeer, updateBeer, editBeer } from '../../actions/beer_actions';
 
 const mapStateToProps = (state, ownProps) => {

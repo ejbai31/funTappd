@@ -33,7 +33,7 @@ class BeerIndex extends React.Component{
       return(
 
         <div className="beer-index">
-          <ul>
+          <ul className="beer-index-list">
             {/* {
               Object.keys(this.state.beers).map((key) => (
                 <BeerIndexItem 
