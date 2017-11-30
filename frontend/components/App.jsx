@@ -16,8 +16,6 @@ const App = () => (
       <ProtectedRoute path="/beers" component={BeerContainer} />
       <ProtectedRoute path="/create_beer" component={BeerFormContainer} />
     </Switch>
-    {/* <Route exact path="/beers" component={BeerContainer} />
-    <Route exact path="/breweries" component={BreweryContainer} /> */}
     <footer>
       {/* TODO
       ADD LINKS TO MEDIA */}
