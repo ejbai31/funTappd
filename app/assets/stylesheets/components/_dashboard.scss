@@ -1,8 +1,8 @@
 .user-dashboard{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .sidebar-left{
@@ -28,6 +28,8 @@
   border-radius: 5px;
   opacity: 0.9;
   padding: 10px;
+  width: 700px;
+  height: 300px;
 }
 
 .user-list{
@@ -38,4 +40,9 @@
 .errors{
   list-style: none;
   color: red;
+}
+
+.user-image{
+  max-height: 250px;
+  max-width: 250px;
 }

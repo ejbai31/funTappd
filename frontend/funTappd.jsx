@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.signup = signup;
     window.logout = logout;
     window.fetchBeer = fetchBeer;
-    window.fetchBeers = fetchBeers;
+
     window.deleteBeer = deleteBeer;
     window.getState = store.getState;
     window.dispatch = store.dispatch;

@@ -50,3 +50,9 @@ end
   brewery_id = Random.rand(Brewery.all.count) + 1 
   Beer.create!(name: name, style: style, abv: abv, description: description, img_url: "beer_bottle-512.png", rating: rating, brewery_id: brewery_id)
 end
+
+review1 = BeerReview.create(rating: 1.0, text: "meh")
+review2 = BeerReview.create(rating: 2.0, text: "oooooooo")
+review3 = BeerReview.create(rating: 3.5, text: "p good")
+review4 = BeerReview.create(rating: 4.0, text: "wow")
+review5 = BeerReview.create(rating: 5.0, text: "amaze")
