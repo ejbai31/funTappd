@@ -5,11 +5,6 @@ class Beer < ApplicationRecord
 
   has_many :reviews
 
-  after_initialize :insure_img
-
-  def insure_img
-    self.img_url ||= "beer_bottle-512.png"
-  end
 
 
   def brewery_name

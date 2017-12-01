@@ -41,38 +41,28 @@ end
 end
 
 
-# 20.times do 
-#   name = Faker::Beer.name
-#   style = Faker::Beer.style
-#   abv = Faker::Beer.alcohol
-#   description = Faker::MostInterestingManInTheWorld.quote
-#   rating = Faker::Number.between(1, 5)
-#   brewery_id = Random.rand(Brewery.all.count) + 1 
-#   Beer.create!(name: name, style: style, abv: abv, description: description, img_url: "beer_bottle-512.png", rating: rating, brewery_id: brewery_id)
-# end
 
 
-
-beer1 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "wow", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer2 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "meh", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer3 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "pretty good", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer4 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "tasty", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer5 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "disgusting", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer6 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "great value", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer7 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "so good", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer8 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "so good and tasty", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer9 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "best I've ever had", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer10 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "amen", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer11 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "PTL", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer12 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "nah", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer13 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "terrible", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer14 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "never again", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer15 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "who made this", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer16 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "MVP", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer17 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "never again", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer18 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "favorite", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer19 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "nope", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
-beer20 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "thumbs up", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1)
+beer1 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "wow", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer2 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "meh", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer3 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "pretty good", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer4 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "tasty", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer5 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "disgusting", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer6 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "great value", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer7 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "so good", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer8 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "so good and tasty", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer9 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "best I've ever had", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer10 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "amen", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer11 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "PTL", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer12 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "nah", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer13 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "terrible", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer14 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "never again", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer15 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "who made this", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer16 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "MVP", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer17 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "never again", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer18 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "favorite", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer19 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "nope", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
+beer20 = Beer.create( name: Faker::Beer.name, style: Faker::Beer.style, abv: Faker::Beer.alcohol, description: "thumbs up", rating: Faker::Number.between(1, 5), brewery_id: Random.rand(Brewery.all.count)+1, img_url: 'http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png')
 
 
 

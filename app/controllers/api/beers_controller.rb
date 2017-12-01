@@ -2,15 +2,10 @@ class Api::BeersController < ApplicationController
 
   
   def create 
-    p "="*8
-    p params
-    p "="*8
     brewery = Brewery.find_or_create_by(name: params[:beer][:brewery])
     @beer = Beer.new(beer_params)
+    @beer.img_url = "http://res.cloudinary.com/ejbai31/image/upload/c_scale,w_512/v1512167948/beer_bottle-512_uutbkv.png" unless @beer.img_url
     @beer.brewery = brewery
-    p "="*8
-    p beer_params
-    p "="*8
     if @beer.save 
       render 'api/beers/show'
     else
@@ -20,14 +15,8 @@ class Api::BeersController < ApplicationController
 
 
   def update
-    p params
     @beer = Beer.find_by(id: params[:id])
     brewery = Brewery.find_or_create_by(name: params[:beer][:brewery])
-    p "="*8
-    p @beer
-    p brewery
-    p "="*8 
-    # @beer.update(brewery: brewery)
     if @beer && @beer.update(beer_params)
       render :show
     else

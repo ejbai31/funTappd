@@ -11,8 +11,10 @@ export default ({ currentUser, logout }) => {
         <Link className="nav-buttons" to="/beers">Beers</Link>
         <Link className="nav-buttons" to="/breweries">Breweries</Link>
       </div>
-      <p>{currentUser.username}</p>
-      <button onClick={logout}>Log Out</button>
+      <div className="nav-display">
+        <p>Welcome, {currentUser.username}!</p>
+        <button onClick={logout}>Log Out</button>
+      </div>
     </div>
   ) : (
       <div className="session-form">

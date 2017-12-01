@@ -12,14 +12,7 @@ class BeerIndex extends React.Component{
   }
 
   render(){
-    // const {beers} = this.props;
-    // console.log(beers);
-    // console.log(this.props.beers);
-    // if (!(this.props.beers)){
-    //   debugger
-    //   return null;
-    // }else{
-      // console.log("IN HERE", this.props.beers);
+  
 
     const display = this.props.beers ? (
       Object.keys(this.props.beers).reverse().map(key => 
@@ -34,13 +27,6 @@ class BeerIndex extends React.Component{
 
         <div className="beer-index">
           <ul className="beer-index-list">
-            {/* {
-              Object.keys(this.state.beers).map((key) => (
-                <BeerIndexItem 
-                  beer={this.state.beers[key]}
-                />
-              ))
-            } */}
             <h1>Beer List</h1>
             <Link className="add-beer-button" to="/create_beer">+ Beer!</Link>
             {display}

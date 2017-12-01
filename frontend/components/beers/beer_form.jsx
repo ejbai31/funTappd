@@ -55,13 +55,9 @@ class BeerForm extends React.Component{
   }
 
   componentDidMount(){
-    console.log('in did mount');
-    console.log();
     if(this.props.formType === "edit" && !!this.state.beer){
-      console.log('in if state');
       this.props.fetchBeer(this.props.match.params.id);
     }
-    console.log('end did mount');
   }
   
   componentWillReceiveProps(newProps){
@@ -71,12 +67,9 @@ class BeerForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     if(this.props.formType === "new"){
-      console.log(this.state.beer);
       this.props.createBeer(this.state.beer)
         .then(() => this.props.history.push('/beers'));
     }else{
-      console.log('edit');
-      // console.log(this.state.beer);
       this.props.updateBeer(this.state.beer)
         .then(() => this.props.history.push('/beers'));
     }
@@ -111,21 +104,15 @@ class BeerForm extends React.Component{
     }
 
 
-
-      // this.setState(
-      //    { [beer][field]: e.target.value } }
-      //   );
   }
 
   deleteBeer(e) {
     e.preventDefault();
-    console.log(this.props.beer);
     this.props.deleteBeer(this.state.beer.id)
     .then(() => this.props.history.push('/beers'));
   }
 
   render(){
-    console.log(this.state);
     let deleteButton = "";
     let formType = this.props.formType;
     if (formType === 'edit') {
@@ -133,7 +120,6 @@ class BeerForm extends React.Component{
     }
 
     if (this.props.formType === "edit" && !this.props.fields) return null;
-    console.log(this.props);
     return(
       <div className="create-beer-main">
         <form className="add-beer-form">
