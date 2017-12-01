@@ -14,7 +14,7 @@ class Api::BeersController < ApplicationController
 
   def update
     @beer = Beer.find_by(id: params[:id])
-    brewery = Brewery.find_or_create_by(name: params[:beer][:brewery][:name])
+    brewery = Brewery.find_or_create_by(name: params[:beer][:brewery])
     @beer.update(brewery: brewery)
     if @beer && @beer.update(beer_params)
       render :show
@@ -35,7 +35,7 @@ class Api::BeersController < ApplicationController
   def destroy
     @beer = Beer.find(params[:id])
     @beer.delete
-    render 'api/beers/index'
+    render 'api/beers/show'
   end
 
   def index 

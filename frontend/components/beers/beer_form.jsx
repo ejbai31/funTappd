@@ -7,6 +7,7 @@ class BeerForm extends React.Component{
     this.state = this.props.fields;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.deleteBeer = this.deleteBeer.bind(this);
   }
 
   componentDidMount(){
@@ -36,12 +37,19 @@ class BeerForm extends React.Component{
     };
   }
 
+  deleteBeer(e) {
+    e.preventDefault();
+    console.log(this.props);
+    this.props.deleteBeer(this.state.id)
+    .then(() => this.props.history.push('/beers'));
+  }
 
   render(){
+    console.log(this.props);
     let deleteButton = "";
     let formType = this.props.formType;
     if (formType === 'edit') {
-      deleteButton = <button onClick={this.deleteDrink}>Delete</button>;
+      deleteButton = <button onClick={this.deleteBeer.bind(this)}>Delete</button>;
     }
 
     if (this.props.formType === "edit" && !this.props.fields) return null;
@@ -60,7 +68,7 @@ class BeerForm extends React.Component{
           <h2>Brewery</h2>
           <input 
           onChange={this.update('brewery')}
-          value={this.state.brewery.name}
+          value={this.state.brewery}
           type="text"/>
           
           <h2>Style</h2>

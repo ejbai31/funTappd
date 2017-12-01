@@ -24,7 +24,7 @@ export const fetchBeers = () => (
 export const deleteBeer = id => (
   $.ajax({
     method: "DELETE", 
-    url: '/api/beers'
+    url: `/api/beers/${id}`
   })
 );
 

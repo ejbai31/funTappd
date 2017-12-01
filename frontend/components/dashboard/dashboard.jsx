@@ -20,10 +20,25 @@ class Dashboard extends React.Component{
             <h1>====USERCARD====</h1>         
             <img className="user-image" src="beer_bottle-512.png" alt="USER IMAGE"/>
             {this.props.user.username}
+            <div>
+              <label htmlFor="">Total Checkins</label>
+            </div>
             {/* <FavoritesTable /> */}
           </div>
           <div className ="user-list">
             <h1>====USERLIST====</h1>
+            <label htmlFor="">Top Beers</label>
+            <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+            <label htmlFor="">Top Breweries</label>
+            <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
           </div>
         </div>
         <div className="user-feed">

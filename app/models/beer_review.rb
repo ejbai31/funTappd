@@ -5,8 +5,8 @@ class BeerReview < ApplicationRecord
 
   belongs_to :beer
 
-  def averager
+  # def averager
     
-  end
+  # end
 
 end

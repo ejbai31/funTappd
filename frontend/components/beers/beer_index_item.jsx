@@ -13,7 +13,7 @@ class BeerIndexItem extends React.Component{
         <div className="beer-info-main">
           <img src={this.props.beer.image_url} alt="beer default"/>
           <h2>{this.props.beer.name}</h2>
-          <h3>Brewery: {this.props.beer.brewery.name}</h3>
+          <h3>Brewery: {this.props.beer.brewery_name}</h3>
           <div className="edit-delete-buttons">
             <Link to={`/beers/${this.props.beer.id}/edit`}>Edit</Link>
       
