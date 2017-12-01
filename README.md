@@ -3,7 +3,7 @@
 
 [funTappd live](http://funtappd.herokuapp.com)
 
-funTappd is a full-stack web application designed after Untappd. It is built on a Ruby on Rails backend, PostgreSQL database, and React.js frontend.
+funTappd is a full-stack web application designed after Untappd. It is built on a Ruby on Rails backend, PostgreSQL database, and React.js frontend. The application also utilizes Cloudinary to manage images files, where users are able to upload pictures of the beers that they come across within their reviews.
 
 ## Features & Implementation 
 

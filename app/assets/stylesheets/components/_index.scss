@@ -1,13 +1,14 @@
 .beer-index{
-  margin: 10px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   h1{
     font-size: 36px;
   }
-  
+  width: 60%;
+  align-items: center;
 }
 
 .beer-index-item{
@@ -38,6 +39,12 @@
   }
 }
 
+.form-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
 .add-beer-button{
   border: 1px black solid;
   padding: 5px;

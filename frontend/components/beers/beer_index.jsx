@@ -26,9 +26,11 @@ class BeerIndex extends React.Component{
       return(
 
         <div className="beer-index">
-          <ul className="beer-index-list">
+          <div className="form-top">
             <h1>Beer List</h1>
             <Link className="add-beer-button" to="/create_beer">+ Beer!</Link>
+          </div>
+          <ul className="beer-index-list">
             {display}
           </ul>
         </div>
