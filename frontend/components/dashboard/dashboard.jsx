@@ -12,13 +12,14 @@ class Dashboard extends React.Component{
   // }
 
   render(){
+    // debugger
     return(
       <div className="user-dashboard">
-      
+
         <div className="sidebar-left">
           <div className="user-card">
             <h1>====USERCARD====</h1>         
-            <img className="user-image" src="https://ichef.bbci.co.uk/images/ic/720x405/p047z06c.jpg" alt="USER IMAGE"/>
+            <img className="user-image" src={this.props.user.img_url} alt="USER IMAGE"/>
             {this.props.user.username}
             <div>
               <label htmlFor="">Total Checkins</label>
@@ -58,3 +59,4 @@ export default Dashboard;
 // (<div>
 //   THE FEEEEEEEEEEEEEEEEEEEEED
 // </div>);
+// https://ichef.bbci.co.uk/images/ic/720x405/p047z06c.jpg

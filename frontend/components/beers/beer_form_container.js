@@ -15,9 +15,14 @@ const mapStateToProps = (state, ownProps) => {
     brewery: ''
   });
   if (ownProps.match.path === "/beers/:id/edit"){
-    fields = state.beers[ownProps.match.params.id];
+    
+    let beer = state.beers[ownProps.match.params.id];
     formType = "edit";
-    fields.brewery = fields.brewery_name;
+    fields.brewery = beer.brewery_name;
+    fields.name = beer.name;
+    fields.style = beer.style;
+    fields.description = beer.description;
+    fields.abv = beer.abv;
   }
 
   return({fields, formType});

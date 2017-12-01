@@ -2,9 +2,12 @@ import { connect } from 'react-redux';
 import { fetchBeers, deleteBeer } from '../../actions/beer_actions';
 import BeerIndex from './beer_index';
 
-const mapStateToProps = state => ({
-  beers: state.beers
-});
+const mapStateToProps = state => {
+
+  return({
+    beers: state.beers
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   getBeers: () => dispatch(fetchBeers()),

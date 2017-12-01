@@ -27,3 +27,4 @@ export const fetchUser = id => (
     method: 'GET'
   })
 );
+
