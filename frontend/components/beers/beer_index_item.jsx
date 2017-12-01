@@ -7,8 +7,6 @@ class BeerIndexItem extends React.Component{
   }
 
   render(){
-    console.log('in index item render');
-    console.log(this.props);
     return(
       <div className="beer-index-item">
         <div className="beer-info-main">

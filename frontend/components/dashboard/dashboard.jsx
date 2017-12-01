@@ -1,5 +1,6 @@
 import React from 'react';
 import FavoritesTable from './favorites_table';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class Dashboard extends React.Component{
   constructor(props){
@@ -22,7 +23,7 @@ class Dashboard extends React.Component{
             <img className="user-image" src={this.props.user.img_url} alt="USER IMAGE"/>
             {this.props.user.username}
             <div>
-              <label htmlFor="">Total Checkins</label>
+              <label htmlFor="">Total Reviews</label>
             </div>
             {/* <FavoritesTable /> */}
           </div>
@@ -44,6 +45,7 @@ class Dashboard extends React.Component{
         </div>
         <div className="user-feed">
           <h1>USERFEED</h1>
+          <ReviewIndexContainer />
         </div>
         
       </div>

@@ -35,7 +35,7 @@ const receiveReviewErrors = (errors) => {
 
 export const getReviews = () => dispatch => {
   return ReviewUtil.getReviews()
-    .then(reviews => dispatch(getReviews(reviews)),
+    .then(reviews => dispatch(receiveReviews(reviews)),
     errors => dispatch(receiveReviewErrors(errors.responseJSON))
   );
 };
