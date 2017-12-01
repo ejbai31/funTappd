@@ -2,16 +2,16 @@ class Api::BeersController < ApplicationController
 
   
   def create 
-      p "="*8
+    p "="*8
     p params
-       p "="*8
-    @beer = Beer.new(beer_params)
+    p "="*8
     brewery = Brewery.find_or_create_by(name: params[:beer][:brewery])
+    @beer = Beer.new(beer_params)
     @beer.brewery = brewery
     p "="*8
     p beer_params
-       p "="*8
-    if @beer.save
+    p "="*8
+    if @beer.save 
       render 'api/beers/show'
     else
       render json: @beer.errors.full_messages, status: 422
@@ -57,6 +57,10 @@ class Api::BeersController < ApplicationController
   private
 
   def beer_params
-    params.require(:beer).permit(:name, :style, :abv, :description, :rating)
+    params.require(:beer).permit(:name, :style, :abv, :description, :rating, :img_url)  
+  end
+
+  def brewery_params
+    params.require(:beer).permit(:brewery)
   end
 end

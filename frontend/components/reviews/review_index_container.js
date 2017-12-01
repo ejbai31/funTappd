@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import ReviewIndex from './review_index';
-import { getReviews, getReview, createReview, updateReview, } from '../../actions/review_actions';
+import { getReviews, getReview, createReview, updateReview, deleteReview } from '../../actions/review_actions';
 
 const getStateToProps = state => ({
-  review: state.reviews
+  review: state.reviews,
+  id: state.session.getCurrentUser
 });
 
-const getDispatchToProps = state => ({
-
+const getDispatchToProps = dispatch => ({
+  deleteReview: id => dispatch(deleteReview(id))
 });
 
 

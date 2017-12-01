@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import { merge } from 'lodash';
 
 const CLOUDINARY_UPLOAD_PRESET = 'sakf4ypp';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/ejbai31/image/upload';
@@ -18,6 +19,7 @@ class BeerForm extends React.Component{
         rating: this.props.fields.rating,
         description: this.props.fields.description,
         brewery: this.props.fields.brewery,
+        img_url: this.props.fields.img_url
       },
       uploadedFileCloudinaryUrl: ''
       
@@ -46,9 +48,8 @@ class BeerForm extends React.Component{
       }
 
       if (response.body.secure_url !== '') {
-        this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url
-        });
+        const newState = merge({}, this.state, { uploadedFileCloudinaryUrl: response.body.secure_url, beer: {img_url: response.body.secure_url}});
+        this.setState(newState);
       }
     });
   }

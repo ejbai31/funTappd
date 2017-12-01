@@ -12,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
     abv: '',
     rating: false,
     description: '',
-    brewery: ''
+    brewery: '',
+    img_url: ''
   });
   if (ownProps.match.path === "/beers/:id/edit"){
     
