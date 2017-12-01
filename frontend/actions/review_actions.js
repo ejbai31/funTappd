@@ -61,8 +61,8 @@ export const updateReview = (review) => dispatch => {
   );
 };
 
-export const deleteCheckin = (review) => dispatch => {
-  return ReviewUtil.deleteCheckin(review)
+export const deleteReview = (review) => dispatch => {
+  return ReviewUtil.deleteReview(review)
     .then(deletedReview => dispatch(removeReview(deletedReview)),
     errors => dispatch(receiveReviewErrors(errors.responseJSON))
   );

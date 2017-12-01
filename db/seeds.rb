@@ -51,8 +51,8 @@ end
   Beer.create!(name: name, style: style, abv: abv, description: description, img_url: "beer_bottle-512.png", rating: rating, brewery_id: brewery_id)
 end
 
-review1 = BeerReview.create(rating: 1.0, text: "meh")
-review2 = BeerReview.create(rating: 2.0, text: "oooooooo")
-review3 = BeerReview.create(rating: 3.5, text: "so good")
-review4 = BeerReview.create(rating: 4.0, text: "tasty")
-review5 = BeerReview.create(rating: 5.0, text: "sooo goood and tasty")
+review1 = BeerReview.create(rating: 1.0, review: "meh", user_id: 2, beer_id: 1)
+review2 = BeerReview.create(rating: 2.0, review: "oooooooo", user_id: 1, beer_id: 2)
+review3 = BeerReview.create(rating: 3.5, review: "so good", user_id: 1, beer_id: 4)
+review4 = BeerReview.create(rating: 4.0, review: "tasty", user_id: 1, beer_id: 1)
+review5 = BeerReview.create(rating: 5.0, review: "sooo goood and tasty", user_id: 2, beer_id: 2)
