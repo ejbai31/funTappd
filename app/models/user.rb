@@ -6,11 +6,11 @@ class User < ApplicationRecord
 
   has_many :reviews
   
-  after_initialize :ensure_session_token, :insure_img
+  after_initialize :ensure_session_token
 
-  def insure_img
-    self.img_url ||= "default-user.png"
-  end
+  # def insure_img
+  #   self.img_url ||= "default-user.png"
+  # end
     
 
   def self.find_by_credentials(username, password)

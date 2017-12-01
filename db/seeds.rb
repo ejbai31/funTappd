@@ -29,7 +29,7 @@ Faker::LordOfTheRings.unique.clear
 10.times do 
   username = Faker::LordOfTheRings.unique.character
   password = "password"
-  User.create!(username: username, password: password)
+  User.create!(username: username, password: password, img_url: "default-user.png")
 end
 
 
