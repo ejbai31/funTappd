@@ -8,9 +8,9 @@ class User < ApplicationRecord
   
   after_initialize :ensure_session_token, :insure_img
 
-  # def insure_img
-  #   self.img_url ||= "default-user.png"
-  # end
+  def insure_img
+    self.img_url ||= "default-user.png"
+  end
     
 
   def self.find_by_credentials(username, password)
