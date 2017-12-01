@@ -53,6 +53,6 @@ end
 
 review1 = BeerReview.create(rating: 1.0, text: "meh")
 review2 = BeerReview.create(rating: 2.0, text: "oooooooo")
-review3 = BeerReview.create(rating: 3.5, text: "p good")
-review4 = BeerReview.create(rating: 4.0, text: "wow")
-review5 = BeerReview.create(rating: 5.0, text: "amaze")
+review3 = BeerReview.create(rating: 3.5, text: "so good")
+review4 = BeerReview.create(rating: 4.0, text: "tasty")
+review5 = BeerReview.create(rating: 5.0, text: "sooo goood and tasty")
