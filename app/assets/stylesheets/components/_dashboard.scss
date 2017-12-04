@@ -19,9 +19,18 @@
     opacity: 0.9;
   }
   .user-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    align-content: center;
+    padding: 20px;
+    img{
+      border: none;
+    }
   }
 }
+
 
 .user-feed{
   border: solid black 1px;
@@ -61,6 +70,18 @@
   div{
     margin: 10px;
   }
+}
+
+.user-link{
+  font-weight: 700;
+}
+
+.beer-link{
+  font-weight: 700;
+}
+
+.user-link:hover, .beer-link:hover {
+  text-decoration: underline;
 }
 
 image{

@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
     rating: false,
     description: '',
     brewery: '',
-    img_url: ''
+    img_url: 'https://res.cloudinary.com/ejbai31/image/upload/v1512376982/beer_bottle-512_ulxjj6.png'
   });
   if (ownProps.match.path === "/beers/:id/edit"){
     

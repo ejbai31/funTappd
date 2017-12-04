@@ -9,7 +9,7 @@ export default ({ currentUser, logout }) => {
     <div className="nav-show">
       <div className="nav-links">
         <Link className="nav-buttons" to="/beers">Beers</Link>
-        <Link className="nav-buttons" to="/breweries">Breweries</Link>
+        {/* <Link className="nav-buttons" to="/breweries">Breweries</Link> */}
       </div>
       <div className="nav-display">
         <p>Welcome, {currentUser.username}!</p>

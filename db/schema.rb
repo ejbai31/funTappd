@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20171126030523) do
     t.float "rating", null: false
     t.text "description", null: false
     t.integer "brewery_id", null: false
-    t.string "img_url"
+    t.string "img_url", default: "https://res.cloudinary.com/ejbai31/image/upload/v1512376982/beer_bottle-512_ulxjj6.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20171126030523) do
     t.string "username", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
-    t.string "img_url"
+    t.string "img_url", default: "https://res.cloudinary.com/ejbai31/image/upload/v1512376920/default-user_dqm6tz.png"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["session_token"], name: "index_users_on_session_token", unique: true

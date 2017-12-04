@@ -123,6 +123,7 @@ class BeerForm extends React.Component{
     return(
       <div className="create-beer-main">
         <form className="add-beer-form">
+          {/* <img src={this.state.beer.img_url} alt=""/> */}
           <Dropzone
             className="form-pic-drop"
             multiple={false}

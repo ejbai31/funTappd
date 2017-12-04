@@ -14,7 +14,7 @@ class Dashboard extends React.Component{
         <div className="sidebar-left">
           <div className="user-card">
             <h1>User Info</h1>         
-            <img className="user-image" src="https://ichef.bbci.co.uk/images/ic/720x405/p047z06c.jpg" alt="USER IMAGE"/>
+            <img className="user-image" src="https://res.cloudinary.com/ejbai31/image/upload/v1512376920/default-user_dqm6tz.png" alt="USER IMAGE"/>
             {'User:'} {this.props.user.username}
             <div>
               <label className="total-reviews">Total Reviews: 13</label>

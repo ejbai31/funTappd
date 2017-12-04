@@ -63,3 +63,31 @@ img {
   border: 1px dotted black;
   padding: 5px;
 }
+
+.review-comment{
+  border: 1px solid $lightgray;
+  padding: 10px;
+  border-radius: 2px;
+  h2{
+    font-size: 30px;
+  }
+}
+
+.review-user-img{
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.review-index-item-top{
+  display: flex;
+  flex-direction: row;
+}
+
+img{
+  margin-right: 10px;
+}
+
+p{
+  margin-left: 3px;
+  margin-right: 3px;
+}

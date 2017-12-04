@@ -7,7 +7,7 @@ class CreateBeers < ActiveRecord::Migration[5.1]
       t.float :rating, null:false 
       t.text :description, null: false
       t.integer :brewery_id, null: false 
-      t.string :img_url
+      t.string :img_url, default: "https://res.cloudinary.com/ejbai31/image/upload/v1512376982/beer_bottle-512_ulxjj6.png"
       t.timestamps
     end
   end
