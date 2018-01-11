@@ -19,7 +19,9 @@ const App = () => (
     </Switch>
     <footer>
       {/* TODO
-      ADD LINKS TO MEDIA */}
+      ADD LINKS TO MEDIA 
+      ADD LINKS TO REVIEW LIST PAGE, DISPLAYING CHRONOLOGICAL ORDER
+      */}
     </footer>
   </div>
 );

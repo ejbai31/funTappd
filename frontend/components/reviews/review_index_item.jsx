@@ -42,6 +42,7 @@ class ReviewItem extends React.Component {
           {reviewImage}
           {/* <img className='review-icon' src={review.img_url} /> */}
           <h4>{review.time_ago} ago</h4>
+          {/* TODO 1: ADD EDIT BUTTON IF USER ID MATCHES AUTHOR ID */}
         </div>
       );
     } 
