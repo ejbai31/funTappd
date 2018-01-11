@@ -21,6 +21,7 @@ const App = () => (
       {/* TODO
       ADD LINKS TO MEDIA 
       ADD LINKS TO REVIEW LIST PAGE, DISPLAYING CHRONOLOGICAL ORDER
+      CHANGE ROUTES FOR SEPARATE REVIEW PAGE AND NEW BEER PAGE
       */}
     </footer>
   </div>

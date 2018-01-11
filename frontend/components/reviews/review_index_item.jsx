@@ -16,12 +16,6 @@ class ReviewItem extends React.Component {
     if (review.img_url !== review.img_url) {
       reviewImage = <img className='review-image' src={review.image_url} />;
     }
-    // let deleteButton = "";
-    // if (this.props.toDelete) {
-    //   deleteButton = (
-    //     <button onClick={this.deleteReview.bind(this)}
-    //       className='delete-review'>Delete Review</button>
-    // }
     if(review.id === undefined){
       return null;
     }else{
@@ -43,6 +37,7 @@ class ReviewItem extends React.Component {
           {/* <img className='review-icon' src={review.img_url} /> */}
           <h4>{review.time_ago} ago</h4>
           {/* TODO 1: ADD EDIT BUTTON IF USER ID MATCHES AUTHOR ID */}
+          {/* FORMAT BOXES TO ALIGN FROM THE LEFT */}
         </div>
       );
     } 

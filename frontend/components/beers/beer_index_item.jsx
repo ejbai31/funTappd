@@ -23,6 +23,7 @@ class BeerIndexItem extends React.Component{
           <h3>Style: {this.props.beer.style}</h3>
           <h3>ABV: {this.props.beer.abv}</h3>
           <h3>Info: {this.props.beer.description}</h3>
+          {/* CHANGE INFO TO DESCRIBE BEER, NOT REVIEW */}
           Avg. Rating: {this.props.beer.rating}
         </div>
       </div>
