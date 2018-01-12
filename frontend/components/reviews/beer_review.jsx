@@ -1,4 +1,5 @@
 import React from 'react';
+import BeerReviewItem from './beer_review_item';
 import { Link } from 'react-router-dom';
 
 class BeerReview extends React.Component{
@@ -7,10 +8,17 @@ class BeerReview extends React.Component{
   }
 
   render(){
+    // review foreign key logic here ****
+    // add logic for edit button being available if it is own review
     return(
-      <div>
-
-      </div>
+      <ul className = 'beer-review-index'>
+        <h1></h1>
+        <div>
+          <BeerReviewItem
+            // name, pic, rating, text review (opt)
+          />
+        </div>
+      </ul>
     );
   }
 
