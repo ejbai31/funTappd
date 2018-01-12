@@ -6,6 +6,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Dashboard from './dashboard/dashboard_container';
 import BeerContainer from './beers/beer_index_container';
 import BeerFormContainer from './beers/beer_form_container';
+import BeerReviewsContainer from './reviews/beer_reviews';
 
 const App = () => (
   <div>
@@ -16,6 +17,8 @@ const App = () => (
       <ProtectedRoute exact path="/beers" component={BeerContainer} />
       <ProtectedRoute path="/create_beer" component={BeerFormContainer} />
       <ProtectedRoute path= "/beers/:id/edit" component={BeerFormContainer} />
+      <ProtectedRoute path= "/beers/:id/reviews" component={BeerReviewsContainer} />
+    </Switch>
     </Switch>
     <footer>
       {/* TODO
