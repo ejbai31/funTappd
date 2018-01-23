@@ -1,4 +1,3 @@
-
 export const createBeer = beer => (
   $.ajax({
     method: "POST", 

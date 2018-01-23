@@ -7,6 +7,7 @@ import Dashboard from './dashboard/dashboard_container';
 import BeerContainer from './beers/beer_index_container';
 import BeerFormContainer from './beers/beer_form_container';
 import BeerReviewsContainer from './reviews/beer_review_container';
+import UserPageContainer from './user/user_page_container';
 
 const App = () => (
   <div>
@@ -18,14 +19,8 @@ const App = () => (
       <ProtectedRoute path="/create_beer" component={BeerFormContainer} />
       <ProtectedRoute path= "/beers/:id/edit" component={BeerFormContainer} />
       <ProtectedRoute path= "/beers/:id/reviews" component={BeerReviewsContainer} />  
+      <ProtectedRoute path= "/users/:id" component={UserPageContainer} />  
     </Switch>
-    <footer>
-      {/* TODO
-      ADD LINKS TO MEDIA 
-      ADD LINKS TO REVIEW LIST PAGE, DISPLAYING CHRONOLOGICAL ORDER
-      CHANGE ROUTES FOR SEPARATE REVIEW PAGE AND NEW BEER PAGE
-      */}
-    </footer>
   </div>
 );
 

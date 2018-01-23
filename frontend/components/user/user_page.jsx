@@ -8,7 +8,7 @@ class UserPage extends React.Component{
 
   render(){
     return(
-      <div>
+      <div class="user-show-page">
         <h3>User Page</h3>
       </div>
     );
