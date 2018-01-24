@@ -16,7 +16,6 @@ const mapStateToProps = (state, ownProps) => {
     img_url: 'https://res.cloudinary.com/ejbai31/image/upload/v1512376982/beer_bottle-512_ulxjj6.png'
   });
   if (ownProps.match.path === "/beers/:id/edit"){
-    
     let beer = state.beers[ownProps.match.params.id];
     formType = "edit";
     fields.brewery = beer.brewery_name;

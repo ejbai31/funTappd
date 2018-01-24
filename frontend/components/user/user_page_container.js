@@ -1,6 +1,7 @@
 import React from 'react';
 import UserPage from './user_page';
 import { connect } from 'react-redux';
+import { getUser } from '../../actions/user_actions';
 
 const getStateToProps = state => ({
   user: state.user
@@ -8,7 +9,7 @@ const getStateToProps = state => ({
 });
 
 const getDispatchToProps = dispatch => ({
-  getUser: () => dispatch()
+  getUser: id => dispatch(id)
   // TODO: CREATE USER DISPATCH ACTIONS
 });
 

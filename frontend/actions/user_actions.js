@@ -7,7 +7,7 @@ export const receive_user = user => ({
   user
 });
 
-export const fetchUser = id => dispatch => (
+export const getUser = id => dispatch => (
   UserUtil.fetchUser(id)
-    .then(user => dispatch(fetchUser(user)))
+    .then(user => dispatch(getUser(user)))
 );
