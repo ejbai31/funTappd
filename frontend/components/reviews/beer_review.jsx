@@ -15,6 +15,7 @@ class BeerReview extends React.Component{
         <h1></h1>
         <div>
           <BeerReviewItem
+            
             // name, pic, rating, text review (opt)
           />
         </div>

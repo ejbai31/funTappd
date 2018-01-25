@@ -10,6 +10,12 @@ class UserPage extends React.Component{
     return(
       <div className="user-show-page">
         <h3>User Page</h3>
+        <div className="user-info">
+          <h4>Info</h4>
+          <ul className="user-reviews">
+          
+          </ul>
+        </div>
       </div>
     );
   }

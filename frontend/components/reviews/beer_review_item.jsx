@@ -10,6 +10,8 @@ class BeerReviewItem extends React.Component{
     return(
       <div>
         <h3>Beer Reviews</h3>
+        <ul className="beer-reviews">
+        </ul>
       </div>
     );
   }
