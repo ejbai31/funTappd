@@ -11,3 +11,9 @@ export const updateUser = user => (
     url: `/api/users/${user.get("user[id]")}`
   })
 );
+
+export const deleteUser = user => (
+  $.ajax({
+    method: "DELETE"
+  })
+);
