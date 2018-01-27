@@ -33,6 +33,7 @@ class Dashboard extends React.Component{
               <li>Monkish</li>
               <li>Golden Road</li>
               <li>The Dudes</li>
+              {/* TODO ADD ACTUAL LOGIC */}
             </ol>
           </div>
         </div>
