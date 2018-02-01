@@ -12,7 +12,8 @@ export default ({ currentUser, logout }) => {
         {/* <Link className="nav-buttons" to="/breweries">Breweries</Link> */}
       </div>
       <div className="nav-display">
-        <p>Welcome, {currentUser.username}!</p>
+        <p>Welcome, </p>
+        <Link className="name-redirect" to="/dashboard">{currentUser.username}!</Link>
         <button onClick={logout}>Log Out</button>
       </div>
     </div>
