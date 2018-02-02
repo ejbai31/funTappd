@@ -17,6 +17,7 @@ class BeerReview extends React.Component{
           <BeerReviewItem
             
             // name, pic, rating, text review (opt)
+            // load only 10 different reviews at a time
           />
         </div>
       </ul>

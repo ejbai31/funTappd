@@ -11,6 +11,11 @@ class BeerReviewItem extends React.Component{
       <div>
         <h3>Beer Reviews</h3>
         <ul className="beer-reviews">
+        {/* 
+        add props thru reducer
+        actions
+        jbuilder
+         */}
         </ul>
       </div>
     );
