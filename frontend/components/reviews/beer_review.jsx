@@ -18,6 +18,8 @@ class BeerReview extends React.Component{
             
             // name, pic, rating, text review (opt)
             // load only 10 different reviews at a time
+            // add loading icon
+            // implement rating system 
           />
         </div>
       </ul>
