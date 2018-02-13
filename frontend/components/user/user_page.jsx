@@ -13,11 +13,11 @@ class UserPage extends React.Component{
         <div className="user-info">
           <div>User Image</div>
           <div className="user-stats">
-            {/* put in number of checkins/reviews */}
+            {/* put in number of checkins & reviews */}
           </div>
           <h4>Info</h4>
           <ul className="user-reviews">
-            {/* every review of user */}
+            {/* every review of user with aprpop edit opt*/}
           </ul>
         </div>
       </div>
