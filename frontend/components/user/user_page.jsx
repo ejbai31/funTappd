@@ -18,6 +18,7 @@ class UserPage extends React.Component{
           <h4>Info</h4>
           <ul className="user-reviews">
             {/* every review of user with aprpop edit opt*/}
+            {/* implment max 10 items */}
           </ul>
         </div>
       </div>

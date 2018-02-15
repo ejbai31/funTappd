@@ -22,6 +22,8 @@
 #   end
 # end
 
+# add user photos for other users besides demo
+
 user1 = User.create(username: "guest", password:"password")
 
 Faker::LordOfTheRings.unique.clear
@@ -39,7 +41,6 @@ end
   location = Faker::LordOfTheRings.location
   Brewery.create!(name: name, location: location)
 end
-
 
 
 
