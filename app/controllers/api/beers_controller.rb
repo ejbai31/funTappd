@@ -13,7 +13,6 @@ class Api::BeersController < ApplicationController
     end
   end
 
-
   def update
     @beer = Beer.find_by(id: params[:id])
     brewery = Brewery.find_or_create_by(name: params[:beer][:brewery])
