@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import { getUser, getUsers } from '../../actions/user_actions';
 
 const getStateToProps = state => ({
-  user: state.user
+  user: state.user, 
+  review: state.review, 
+  beer: state.beer
   // TODO: ADD USER ACTIONS
 });
 
