@@ -1,5 +1,7 @@
 import merge from 'lodash/merge';
-import { RECEIVE_BEER, RECEIVE_BEERS, REMOVE_BEER } from '../actions/beer_actions';
+import { RECEIVE_BEER, 
+        RECEIVE_BEERS, 
+        REMOVE_BEER } from '../actions/beer_actions';
 
 const BeerReducer = (state=[], action) => {
   Object.freeze(state);
